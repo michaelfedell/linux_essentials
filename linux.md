@@ -105,7 +105,11 @@ MY_SECRET="hunter7" python -c "import os; print(os.environ[MY_SECRET])"
 
 #### Redirects
 
+`|`  
+`>`  
+`>>`  
 
+example: `cat debug.logs info.logs | grep model`
 
 #### Environment
 
@@ -161,6 +165,13 @@ User/Group/Permission Management:
 - `groups`: list the groups that a user belongs to
 - `chmod`: edit the permission for a file (CHange file MODe)
 - `chown`: edit the owner/group for a file (CHange file OWNer)
+
+Actual Permission bits (`700`, `+x`, etc.)
+
+Processes:
+- `top`
+- `ps`
+- `kill`
 
 > `^C`, `^D`, and other helpful keystrokes
 
