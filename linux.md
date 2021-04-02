@@ -212,6 +212,7 @@ Navigation:
 - `whoami`: what user am I currently? (`whyami` is not yet widely available)
 - `pwd`: where am I? (Path to Working Directory)
 - `ls`: list the contents of current directory
+- `cd`: change directory to some specified path
 - `echo`: repeat some string back to me
 - `find`: search for files with filename matching some pattern
 
@@ -224,7 +225,12 @@ File Interaction:
 - `wc`: how many words/lines/bytes are in this file? (Word Count)
 - `stat`: show information for file (file STATus)
 - `touch`: create some file
+- `cp`: copy some file from source to destination (will overwrite)
+- `mv`: move some file from source to destination (will overwrite)
+- `rm`: remove some file (not reversible)
+- `mkdir`: create a new, empty directory at specified path
 - `open`: open some file with default or specified application
+- `curl`: download some content from a url
 - `vim` / `nano`: common terminal-based text editors
 
 > Vim is not scary. Vim is a great tool. Vim is your friend.
