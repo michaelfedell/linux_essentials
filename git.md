@@ -169,7 +169,11 @@ One popular one is "Gitflow":
 `merge`: Creates a new commit which includes all the changes from two branches since their divergence
 `rebase`: Reapply commits on top of another base (stashes your un-pushed local commits, pulls down the new remote commits, then pops those stashed local commits)
 
+> Note: merge and rebase can be quite confusing... I think [this guide](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) explains the difference quite well; or, more info on [merge](https://www.atlassian.com/git/tutorials/using-branches/git-merge) and [rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
+
 > Note: anything that changes your working tree (pull, merge, rebase, etc.) should only be run with a **clean** working tree; e.g. stash or commit any new changes first.
+
+![Merge Branch Diagram](https://wac-cdn.atlassian.com/dam/jcr:83323200-3c57-4c29-9b7e-e67e98745427/Branch-1.png?cdnVersion=1549)
 
 ## Managing Releases
 
@@ -221,34 +225,44 @@ On the repository home page, you should see a big green button that�
 ## What if I?
 
 > Have made a ton of changes since my last commit...
+
 add/commit changes incrementally
 
 > Can't push because someone else has made changes...
+
 stash/commit, pull (merge/rebase), push
 
 > Can't pull because I've made changes...
+
 stash
 
 > Can't find the changes I was working on...
+
 check your stash, check your current branch, etc.
 
 > Need to "go back in time"...
+
 git checkout <some commit>
 
 > Mess up some file and need to reset it
+
 git checkout -- <some file>
 
 > Forgot to add a file to my last commit
+
 git commit --amend --no-edit (`oops`)
 
 > Accidentally committed something secret (api key, passwords, etc...)
-It's in history forever...
+
+It's in history forever...  
 Expire the secret, purge from history (bfg)
 
 > Committed something that shouldn't be in git (not sensitive)
+
 git reset <some file> or git remove --cached
 
 > Have made a ton of commits on my branch that I don't want to show up in main branch
+
 git rebase --interactive
 
 ## More Resources
