@@ -143,31 +143,31 @@ One popular one is "Gitflow":
 
 ### Local
 
-`status`: Shows the current status including current branch, comparison to remote, list of new changes, and the stage contents ready for commit
-`log`: Shows a log of commits made on the current branch
-`show`: Shows the changes contained by a particular commit (or other git object)
-`diff`: Shows the changes between particular commits or between a commit and the working tree
-`stash`: Moves your current set of changes into a "stash" for later, returning your working tree to the last commit (can then `list`, `apply`, or `pop` them back out)
-`add`: Adds changes from working tree to the "stage"
-`reset`: Removes changes from the "stage" (changes kept in working tree)
-`commit`: Commits the changes in "stage" to version control history
-`revert`: Create a new commit (or commits) that undo the specified changes
-`branch`: List (`-l`, `-r`, `-a`, or with no arguments), create (specify branch name as argument), or delete branches (`-d` or `-D`)
-`checkout`: Switch branches or restore some file in working tree from its state in history (`git checkout -- some_file`)
-`tag`: Create a new tag pointing to `HEAD` or list existing tags, or delete a specified tag
+- `status`: Shows the current status including current branch, comparison to remote, list of new changes, and the stage contents ready for commit
+- `log`: Shows a log of commits made on the current branch
+- `show`: Shows the changes contained by a particular commit (or other git object)
+- `diff`: Shows the changes between particular commits or between a commit and the working tree
+- `stash`: Moves your current set of changes into a "stash" for later, returning your working tree to the last commit (can then `list`, `apply`, or `pop` them back out)
+- `add`: Adds changes from working tree to the "stage"
+- `reset`: Removes changes from the "stage" (changes kept in working tree)
+- `commit`: Commits the changes in "stage" to version control history
+- `revert`: Create a new commit (or commits) that undo the specified changes
+- `branch`: List (`-l`, `-r`, `-a`, or with no arguments), create (specify branch name as argument), or delete branches (`-d` or `-D`)
+- `checkout`: Switch branches or restore some file in working tree from its state in history (`git checkout -- some_file`)
+- `tag`: Create a new tag pointing to `HEAD` or list existing tags, or delete a specified tag
 
 ### Remotes
 
-`clone`: Download some repository from a remote to your local machine (must have access if private)
-`fetch`: Download objects and refs (branches/tags) from remote
-`remote`: Manage remote repositories tracked by local repository (no arguments to list remotes, `-v` to include associated urls)
-    `add` to add new remote (specify name and url)
-    `rename` to change name for existing remote
-    `remote` to remove
-    `set-url` to change url for existing remote
-`pull`: Incorporate remote changes to local branch (`fetch` and `merge` by default); this will make changes to your working tree (local filesystem)
-`merge`: Creates a new commit which includes all the changes from two branches since their divergence
-`rebase`: Reapply commits on top of another base (stashes your un-pushed local commits, pulls down the new remote commits, then pops those stashed local commits)
+- `clone`: Download some repository from a remote to your local machine (must have access if private)
+- `fetch`: Download objects and refs (branches/tags) from remote
+- `remote`: Manage remote repositories tracked by local repository (no arguments to list remotes, `-v` to include associated urls)
+  - `add` to add new remote (specify name and url)
+  - `rename` to change name for existing remote
+  - `remote` to remove
+  - `set-url` to change url for existing remote
+- `pull`: Incorporate remote changes to local branch (`fetch` and `merge` by default); this will make changes to your working tree (local filesystem)
+- `merge`: Creates a new commit which includes all the changes from two branches since their divergence
+- `rebase`: Reapply commits on top of another base (stashes your un-pushed local commits, pulls down the new remote commits, then pops those stashed local commits)
 
 > Note: merge and rebase can be quite confusing... I think [this guide](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) explains the difference quite well; or, more info on [merge](https://www.atlassian.com/git/tutorials/using-branches/git-merge) and [rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
 
