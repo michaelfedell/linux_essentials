@@ -194,15 +194,15 @@ Wikis provide a place for you to add extra documentation (typically much more ex
 
 ### Issues
 
-
+On one side, issues allow users to report bugs, request new features, or open discussions. On the other side, Issues provide developers and project maintainers a way to track milestones and tasks, interact with collaborators prior to development, and triage priorities. Many open source projects include Issue Templates that specify what content users should include in new features.
 
 ### Repo Settings
 
-
+Remote repositories allow you to control settings such as access controls, integrations, branch protection and much more.
 
 ### SSH Keys
 
-
+GitHub allows you to clone repositories via an https link specific to the repo. This requires that you submit your username/password to authenticate the request. A more secure (and much more convenient) way to do this is via ssh keys - the same keys we use to authenticate to servers and uploaded to our own GitHub accounts in the [the ssh tutorial](./ssh.md#upload-your-key-to-github). Similarly, you can create "deployment keys" for use on an application server. This single-use key must be unique across all repositories in your account and can be used to grant a server read-only or read/write access to a single repository.
 
 #### Using You New SSH Key with Github
 
@@ -212,15 +212,15 @@ On the repository home page, you should see a big green button that�
 
 ### GPG Keys
 
-
+GPG Keys as a construct are beyond scope of this tutorial, but in short, they allow you to verify your identity publicly so that collaborators can be confident that some commit with your username attached did in fact come from you. Anyone can actually make unsigned commits using your email address/username; signing them with a GPG key that you own is a way to protect your identity. [See More](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification)
 
 ### Actions
 
-
+Actions were introduced to GitHub fairly recently and allow users to perform CI/CD operations on GitHub's shared resources. CI/CD is beyond the scope of this tutorial, but we can discuss GH Actions in more detail if you're interested. [See More](https://github.com/features/actions)
 
 ### Pages
 
-
+GitHub Pages provide a super simple way to publish a website for yourself based on a GitHub repository. This can be done in just a few simple clicks and is a great way to show off your projects, host a personal portfolio page, or provide more documentation for a public project. We don't have time to cover this in depth today, but can go over it another time if you're interested. [See More](https://pages.github.com)
 
 ## What if I?
 
