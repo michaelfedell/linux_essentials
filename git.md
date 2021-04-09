@@ -67,7 +67,7 @@ Git is pretty flexible and leaves a lot of room for style and choice. However, b
 - Use your stash for unfinished work: if you need to pull, or checkout something but have in-progress, local changes, you can "stash" them instead of creating a temporary commit.
 - Commit early and often: repo timelines are far more helpful if you can step through small, incremental changes.
 - Write good messages: more info [below](#commit-messages).
-- Don't panic: if you think you've messed up, don't worry - [so has everyone](https://www.edureka.co/blog/common-git-mistakes/) - and there are lots of guides online! Just a simple google of "Oops... I committed all those changes to the master branch" will usually get you an answer! Also see [How to undo (almost) anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/).
+- Don't panic: if you think you've messed up, don't worry - [so has everyone](https://www.edureka.co/blog/common-git-mistakes/) - and there are lots of guides online! Just a simple google of "Oops... I committed all those changes to the master branch" will usually get you an answer!
 
 ### Commit Messages
 
@@ -224,46 +224,48 @@ On the repository home page, you should see a big green button that�
 
 ## What if I?
 
-> Have made a ton of changes since my last commit...
+Have made a ton of changes since my last commit...
 
-add/commit changes incrementally
+> add/commit changes incrementally
 
-> Can't push because someone else has made changes...
+Can't pull because I've made changes...
 
-stash/commit, pull (merge/rebase), push
+> stash/commit first!
 
-> Can't pull because I've made changes...
+Can't push because someone else has made changes...
 
-stash
+> stash/commit first, then pull (merge/rebase), then push
 
-> Can't find the changes I was working on...
+Can't find the changes I was working on...
 
-check your stash, check your current branch, etc.
+> check your stash, check your current branch, etc.
 
-> Need to "go back in time"...
+Need to "go back in time"...
 
-git checkout <some commit>
+> git checkout <some commit>; warning: this will "detach" you from the current, what you do from here is up to you
 
-> Mess up some file and need to reset it
+Mess up some file and need to reset it
 
-git checkout -- <some file>
+> git checkout -- <some file>; warning: this will discard your current changes and restore file to it's last committed state
 
-> Forgot to add a file to my last commit
+Forgot to add a file to my last commit
 
-git commit --amend --no-edit (`oops`)
+> git commit --amend --no-edit (I use `oops` for this); warning: this modifies history and should not be done to commits already pushed to remote
 
-> Accidentally committed something secret (api key, passwords, etc...)
+Accidentally committed something secret (api key, passwords, etc...)
 
-It's in history forever...  
-Expire the secret, purge from history (bfg)
+> It's in history forever...  
+> Expire the secret (at least), if it doesn't matter, you could delete the remote repository and create a new repository with all the content but none of the history (`rm -rf ./.git; git init`), or if you need to keep the history, you can purge your secrets with a tool called bfg; if you need to do this, you probably need to pull up a much more complete guid,
 
-> Committed something that shouldn't be in git (not sensitive)
+Committed something that shouldn't be in git (not sensitive)
 
-git reset <some file> or git remove --cached
+> git reset <some file> or git remove --cached
 
-> Have made a ton of commits on my branch that I don't want to show up in main branch
+Have made a ton of commits on my branch that I don't want to show up in main branch
 
-git rebase --interactive
+> git rebase --interactive
+
+Or, just check out this great blog on [How to undo (almost) anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/).
 
 ## More Resources
 
