@@ -9,6 +9,7 @@ Servers can be "bare-metal" machines running in a managed data center (deepdish,
 > "server" may also simply refer to a process that is listening to and "serving" connections; e.g. `jupyter notebook` runs a simple web server on your laptop so you can connect to the process via your browser. We will refer to these processes as "web servers" or "app servers" and user "Server" to refer to actual machines (virtual or physical) which users can log into and interact with.
 
 Important parts of a Server:
+
 - operating system
 - file hierarchy
 - users
@@ -21,11 +22,11 @@ Important parts of a Server:
 Operating Systems define how the machine runs and how users interact with its contents. You don't need to know much here but should be familiar with the "families" and some of the most common ones.
 
 - Posix/Unix
-    - Linux
-        - Ubuntu
-        - Debian
-        - Red Hat
-    - MacOS
+  - Linux
+    - Ubuntu
+    - Debian
+    - Red Hat
+  - MacOS
 - Windows
 
 #### Quick Aside on Package Managers
@@ -42,7 +43,6 @@ On MacOS: `brew` (Homebrew)
 
 On Windows... well... typically nothing... [for now anyways](https://devblogs.microsoft.com/commandline/windows-package-manager-preview/)
 
-
 ### Typical Directory Structure
 
 Essentials:
@@ -58,7 +58,7 @@ Essentials:
 - `/usr`: "shared user data" - a whole secondary hierarchy for things that should be read-only but shared across users
 - `/var`: "variable" - these files change often but include things like temp files, logs, etc.
 
-More Info: https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard
+More Info: <https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>
 
 Binaries vs Libraries:
 
@@ -73,6 +73,7 @@ Libraries however are meant to be more flexible or reusable collections of code 
 Every file has three permission sets and three permission types. The permission sets indicate who a particular permission applies to; the permission types indicate what level of interaction is allowed.
 
 A permission looks like `-rwxrwxrwx` where the leading `-` indicates that it is a file (directories start with `d`), and the `rwx` clusters are permission types granted to each set:
+
 ```txt
 -rw-rw-r--  1   user    group   size    timestamp   filename.ext
 ```
@@ -96,7 +97,7 @@ In the permission code we saw earlier (`-rwxrwxrwx`), the file has full, unprote
 
 But 9 characters to describe permission is so wasteful (/s)... so linux has another way to denote permissions: Numerically... as three-digit octals. The permission codes can be mapped as below:
 
-```
+```text
 rwx
 421
 ```
@@ -128,11 +129,13 @@ Every user typically belongs to their own group (e.g. there is a `root` group co
 ### Common ports
 
 Reserved (anything under 1024):
+
 - `22`: SSH (secure shell connections)
 - `80`: HTTP (simple web traffic)
 - `443`: HTTPS (secure web traffic)
 
 Developers typically run internal applications on 4-digit port numbers like:
+
 - `3306`: MySQL default
 - `5432`: Postgres default
 - `3000`: many javascript-based web frameworks like express.js, react.js, etc.
@@ -158,6 +161,12 @@ The **command line** is basically just the line of text you enter into the termi
 - git-bash: This was meant to allow Windows users to make use of `git` which itself relies on many linux-style shell commands. It is in fact a pretty complete shell that exposes Bash commands on a windows environment.
 - WSL: This is a rather new development from microsoft that allows an incredibly easy and seamless development experience on Windows. This allows users to run a mostly complete linux environment right on their windows machine without worrying about typical virtualization or dual-boot setups. Can't recommend this one enough if you're on windows! ([learn more about WSL and how to install it here](https://docs.microsoft.com/en-us/windows/wsl/about))
 
+### Profiles and "rc" Configuration Files
+
+You may have noticed a `.bash_profile` or `.bashrc` in your home folder (`~/`), (or `.zshrc` if you're using `zsh`). These files inform your shell of any commands that should be run when a new session is initialized and is often used to set aliases, configurations, and other settings.
+
+If you want environment variables ([as discussed below](#environment)) or changes to your `PATH` ([as discussed below](#path)) to persist across multiple sessions (e.g. closing and opening a new terminal), you will want to add those changes to your `~/.bashrc` (typically used for environment variables, aliases, and settings) or `~/.bash_profile` (typically used for `PATH` modifications).
+
 ### Commands
 
 Structure:
@@ -171,8 +180,8 @@ MY_SECRET="hunter7" python -c "import os; print(os.environ[MY_SECRET])" > output
 - Environment: Set environment variables specific to the execution of command
 - Command: Run some executable
 - Options: Specify options defined by the executable (optional modifiers)
-    - longhand like `--verbose`
-    - shorthand like `-v`
+  - longhand like `--verbose`
+  - shorthand like `-v`
 - Arguments: Pass arguments to the executable (required parameters)
 - Redirect: Passes the output (text) of one command to some other destination
 
@@ -207,6 +216,7 @@ When you type `python` in your shell, it will go look in these places (in order)
 #### Common Commands
 
 Navigation:
+
 - `which`: what does this thing point to?
 - `man`: manual for this thing?
 - `whoami`: what user am I currently? (`whyami` is not yet widely available)
@@ -217,6 +227,7 @@ Navigation:
 - `find`: search for files with filename matching some pattern
 
 File Interaction:
+
 - `cat`: print the contents of this file (conCATenate; there is no `dog` command)
 - `head` / `tail`: show me the start (head) or end (tail) of this file
 - `less` / `more`: show me this file's contents in pages (`q` to quit)
@@ -237,6 +248,7 @@ File Interaction:
 > (if you want to learn more about vim, I'm happy to hold a crash-course or link you to some good tutorials online...)
 
 User/Group/Permission Management:
+
 - `su`: become superuser or some specified user
 - `sudo`: run this command as superuser
 - `useradd`: create a new user
@@ -247,11 +259,13 @@ User/Group/Permission Management:
 - `chown`: edit the owner/group for a file (CHange file OWNer)
 
 Processes:
+
 - `top`: Display live information about running processes (helpful to see what's hogging memory, etc.)
 - `ps`: Show the status of a process or list all controlled processes (helpful to dig into a particular process)
 - `kill`: Terminate an identified process (helpful to force quit some runaway process or lost thread)
 
 Handy Keystrokes:
+
 - `^C`: Stop the current process (usually to cancel a command)
 - `^D`: Send exit/end-of-line command (often to exit a session)
 - `^R`: Search history of commands (to find a some complex command you looked up last week)
@@ -276,7 +290,7 @@ Handy Keystrokes:
 
 Vim is a very powerful editor and many developers use this as their primary IDE! You certainly don't have to know this much about vim, but you should at least know how to make some simple file edits and exit properly as it is the default editor on many systems and used very widely.
 
-# Activity
+## Activity
 
 I won't make you download and modify a bunch of random files that mean nothing to you... However, I think a useful activity may be to download/install/customize a terminal or a new shell of your choosing! One of the most important things for working in the shell is comfort and familiarity - might as well make it your own!
 
@@ -290,9 +304,9 @@ On Windows, I use [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-wi
 
 There are lots of great activities out there on linux/shell basics so not going to reinvent the wheel here. In fact, Lewis Meineke from previous years has put together a great list of resources:
 
-https://github.com/meineke/workflows/blob/master/sessions/shell.md#resources
+<https://github.com/meineke/workflows/blob/master/sessions/shell.md#resources>
 
-# Most Important Nuggets
+## Most Important Nuggets
 
 - `rm` is basically irreversible, be very careful
 - similarly, the shell is very powerful, so be curious but also careful (esp. when using `sudo`)
