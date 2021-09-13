@@ -185,6 +185,8 @@ MY_SECRET="hunter7" python -c "import os; print(os.environ[MY_SECRET])" > output
 - Arguments: Pass arguments to the executable (required parameters)
 - Redirect: Passes the output (text) of one command to some other destination
 
+> _Bonus_: to get help understanding a command, try out [ExplainShell](https://explainshell.com)
+
 #### Redirects
 
 - `|`: "Pipe" - passes the output of one command straight into the output of another
@@ -215,10 +217,14 @@ When you type `python` in your shell, it will go look in these places (in order)
 
 #### Common Commands
 
-Navigation:
+Meta:
 
 - `which`: what does this thing point to?
 - `man`: manual for this thing?
+- `-h` or `--help`: add this after a command for quick help (if available)
+
+Navigation:
+
 - `whoami`: what user am I currently? (`whyami` is not yet widely available)
 - `pwd`: where am I? (Path to Working Directory)
 - `ls`: list the contents of current directory
@@ -270,6 +276,8 @@ Handy Keystrokes:
 - `^D`: Send exit/end-of-line command (often to exit a session)
 - `^R`: Search history of commands (to find a some complex command you looked up last week)
 - `^L`: Clear the screen (in case you accidentally type your password or just need some space)
+- `^A`: Move the cursor to the beginngin of the prompt
+- `^E`: Move the cursor to the end of the prompt
 - `!!`: Repeat the last command (e.g. `sudo !!`)
 - `Tab`: Autocomplete the command/filename/option you're typing (can install more autocompleters!)
 - `↑` / `↓`: Scroll through previous commands in history
@@ -292,7 +300,13 @@ Vim is a very powerful editor and many developers use this as their primary IDE!
 
 ## Activity
 
-I won't make you download and modify a bunch of random files that mean nothing to you... However, I think a useful activity may be to download/install/customize a terminal or a new shell of your choosing! One of the most important things for working in the shell is comfort and familiarity - might as well make it your own!
+To practice these commands, we'll be working through some basic file manipulation - credit to [Software Carpentry's Shell Tutorial](https://swcarpentry.github.io/shell-novice/).
+
+This is kept in the [Shell Activity](./shell-activity.md) file.
+
+## Making it your own
+
+Another activity I think useful is to download/install/customize a terminal or a new shell of your choosing! One of the most important things for working in the shell is comfort and familiarity - might as well make it your own!
 
 Personally, I use [iTerm2](https://iterm2.com/) with `zsh`. I use [OhMyZsh](https://ohmyz.sh/) to configure/manage the shell and have a few helpful (for me) modifications made to the theme and prompt. I also have a few extra plugins and extensions installed such as aws-autocomplete, an aws profile manager, common-aliases, and kubectl tools. I've also [set quite a few custom aliases](https://www.tecmint.com/create-alias-in-linux/) that have become a regular part of my workflow, like `alias oops='git commit --amend --no-edit'` for when you forget to stage that one file and still haven't pushed.
 
