@@ -33,6 +33,35 @@ We'll cover the core concepts and terms that are fundamental to understanding gi
 - gitignore
 - global gitignore
 
+```shell
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+$ git config --global init.defaultBranch main
+
+$ git config --global core.editor nano  # (OPTIONAL)
+
+$ git config --global core.excludesfile ~/.gitignore_global
+$ nano ~/.gitignore_global
+
+$ git config --list
+user.email=johndoe@example.com
+user.name=John Doe
+```
+
+`~/.gitignore_global`
+
+```text
+.DS_Store
+.vscode/
+.idea/
+__pycache__/
+*.egg-info/
+.env
+.venv
+env/
+venv/
+```
+
 ## Working with Remotes
 
 Local repositories can be kept in sync with a single "remote" (git calls this `origin` by default), or with many named remotes. Each remote will have an identifying name and a url associating it with the remote repository.
@@ -156,7 +185,7 @@ One popular one is "Gitflow":
 - `checkout`: Switch branches or restore some file in working tree from its state in history (`git checkout -- some_file`)
 - `tag`: Create a new tag pointing to `HEAD` or list existing tags, or delete a specified tag
 
-### Remotes
+### Remote
 
 - `clone`: Download some repository from a remote to your local machine (must have access if private)
 - `fetch`: Download objects and refs (branches/tags) from remote
@@ -277,5 +306,3 @@ https://www.atlassian.com/git/tutorials/what-is-version-control
 
 git-scm is the official git software website, their manual pages are often quite helpful when googling something specific, or you can see there handbook here:  
 https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
-
-newline

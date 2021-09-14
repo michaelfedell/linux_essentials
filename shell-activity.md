@@ -38,7 +38,6 @@ drwxrwxr-x 5 ubuntu ubuntu  4096 Jul 30 01:41 writing
 
 ### Insepct the files
 
-
 ```shell
 $ cd data
 
