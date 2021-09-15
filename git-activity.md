@@ -195,7 +195,7 @@ $ git commit -a -m "Add git section to readme"
 
 [dev 6b407d0] Add git section to readme
  1 file changed, 2 insertions(+)
- ```
+```
 
 ```shell
 $ git checkout main
@@ -234,7 +234,7 @@ $ git status -s
 ```shell
 $ git stash
 
-Saved working directory and index state WIP on main: ed4f6e1 Fix readme
+Saved working directory and index state WIP on main: 7502890 Add gitignore to project
 
 $ cat README.md
 
@@ -249,7 +249,7 @@ nothing to commit, working tree clean
 
 $ git stash list
 
-stash@{0}: WIP on main: ed4f6e1 Fix readme
+stash@{0}: WIP on main: 7502890 Add gitignore to project
 (END)
 
 ```
@@ -431,7 +431,6 @@ $ git log --oneline --decorate --graph --all
 | * 6b407d0 (dev) Add git section to readme
 * | 2dab5a4 Add shell section to readme
 |/
-* ed4f6e1 Fix readme
 * 7502890 Add gitignore to project
 * 23f6c5b Initial Commit
 ```
