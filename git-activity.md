@@ -405,7 +405,6 @@ Git doesn't yet know that we're done fixing the file, so we'll have to tell it w
 ```shell
 $ git add README.md
 
-(base) [11:13:39] ➜  northwestern/tutorials/git-demo git:(main) ✗
 $ git status
 
 On branch main
@@ -415,7 +414,6 @@ All conflicts fixed but you are still merging.
 Changes to be committed:
     modified:   README.md
 
-(base) [11:13:42] ➜  northwestern/tutorials/git-demo git:(main) ✗
 $ git commit
 ```
 
