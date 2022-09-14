@@ -52,9 +52,9 @@ nano README.md
 ```
 
 ```markdown
-# Bootcamp 2021
+# Bootcamp 2022
 
-A collection of activities from MSiA Bootcamp 2021
+A collection of activities from MSiA Bootcamp 2022
 
 ```
 
@@ -115,7 +115,7 @@ $ git log
 
 commit 23f6c5b5303f8a684ef60ec2e89c9943df9b1f8e (HEAD -> main)
 Author: Michael Fedell <michaelfedell14@gmail.com>
-Date:   Tue Sep 14 10:42:22 2021 -0700
+Date:   Tue Sep 14 10:42:22 2022 -0700
 
     Initial Commit
 
@@ -132,7 +132,7 @@ $ git show 23f6c5b
 
 commit 23f6c5b5303f8a684ef60ec2e89c9943df9b1f8e (HEAD -> main)
 Author: Michael Fedell <michaelfedell14@gmail.com>
-Date:   Tue Sep 14 10:42:22 2021 -0700
+Date:   Tue Sep 14 10:42:22 2022 -0700
 
     Initial Commit
 
@@ -181,9 +181,9 @@ $ echo "## Git\n" >> README.md
 
 $ cat README.md
 
-# Bootcamp 2021
+# Bootcamp 2022
 
-A collection of activities from MSiA Bootcamp 2021
+A collection of activities from MSiA Bootcamp 2022
 
 ## Git
 
@@ -204,9 +204,9 @@ Switched to branch 'main'
 (base) [10:58:14] ➜  northwestern/tutorials/git-demo git:(main)
 $ cat README.md
 
-# Bootcamp 2021
+# Bootcamp 2022
 
-A collection of activities from MSiA Bootcamp 2021
+A collection of activities from MSiA Bootcamp 2022
 ```
 
 ## Stash
@@ -218,9 +218,9 @@ $ echo "## Shell\n" >> README.md
 
 $ cat README.md
 
-# Bootcamp 2021
+# Bootcamp 2022
 
-A collection of activities from MSiA Bootcamp 2021
+A collection of activities from MSiA Bootcamp 2022
 
 ## Shell
 
@@ -238,9 +238,9 @@ Saved working directory and index state WIP on main: 7502890 Add gitignore to pr
 
 $ cat README.md
 
-# Bootcamp 2021
+# Bootcamp 2022
 
-A collection of activities from MSiA Bootcamp 2021
+A collection of activities from MSiA Bootcamp 2022
 
 $ git status
 
@@ -268,9 +268,9 @@ Dropped refs/stash@{0} (72c5e7f509cfea99faec4eadd835fbc6d5f9741c)
 
 $ cat README.md
 
-# Bootcamp 2021
+# Bootcamp 2022
 
-A collection of activities from MSiA Bootcamp 2021
+A collection of activities from MSiA Bootcamp 2022
 
 ## Shell
 
@@ -358,9 +358,9 @@ $ nano README.md
 ```
 
 ```markdown
-# Bootcamp 2021
+# Bootcamp 2022
 
-A collection of activities from MSiA Bootcamp 2021
+A collection of activities from MSiA Bootcamp 2022
 
 <<<<<<< HEAD
 ## Shell
@@ -374,9 +374,9 @@ The `<<<<<<<`, `=======`, and `>>>>>>>` markers tell us which parts of the file 
 In this case, we can fix this conflict by  editing the file to allow both changes to stay. Simply remove the lines containing `<<<<<<<`, `=======`, and `>>>>>>>` so that your file looks like:
 
 ```markdown
-# Bootcamp 2021
+# Bootcamp 2022
 
-A collection of activities from MSiA Bootcamp 2021
+A collection of activities from MSiA Bootcamp 2022
 
 ## Shell
 

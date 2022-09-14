@@ -302,7 +302,8 @@ GitHub provides a nice "cheat sheet" for common git commands:
 https://education.github.com/git-cheat-sheet-education.pdf
 
 Atlassian (providers of BitBucket) has an excellent tutorial/handbook for all things git:  
-https://www.atlassian.com/git/tutorials/what-is-version-control
+https://www.atlassian.com/git/tutorials/what-is-version-control  
+https://www.atlassian.com/git/tutorials/setting-up-a-repository
 
 git-scm is the official git software website, their manual pages are often quite helpful when googling something specific, or you can see there handbook here:  
 https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
