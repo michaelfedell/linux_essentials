@@ -33,15 +33,17 @@ We'll cover the core concepts and terms that are fundamental to understanding gi
 - gitignore
 - global gitignore
 
+For more information and suggestions of initial configuration of your git client, see the [official git docs](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+
 ```shell
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 $ git config --global init.defaultBranch main
 
-$ git config --global core.editor nano  # (OPTIONAL)
+$ git config --global core.editor nano  # (OPTIONAL; will use nano instead of vim)
 
 $ git config --global core.excludesfile ~/.gitignore_global
-$ nano ~/.gitignore_global
+$ nano ~/.gitignore_global. # See below for global gitignore suggestions
 
 $ git config --list
 user.email=johndoe@example.com
@@ -144,6 +146,7 @@ Resolves: #123
 ```
 
 **The seven rules of a great Git commit message** (from [Chris Beams blog](https://chris.beams.io/posts/git-commit/))
+
 1. Separate subject from body with a blank line
 2. Limit the subject line to 50 characters
 3. Capitalize the subject line
