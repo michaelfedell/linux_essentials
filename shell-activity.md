@@ -17,8 +17,8 @@ $ ls
 
 $ cd Desktop
 
-$ curl -Lo shell-data.zip https://swcarpentry.github.io/shell-novice/data/shell-lesson-data.zip
- 
+$ curl -Lo shell-data.zip https://github.com/michaelfedell/linux_essentials/raw/main/shell-data.zip
+
 $ unzip -q shell-data.zip
 
 $ cd shell-lesson-data
