@@ -98,7 +98,7 @@ creatures  data  molecules  north-pacific-gyre  notes.txt  numbers.txt  pizza.cf
 $ ls thesis
 draft.txt
 
-$ cat thesis.txt
+$ cat thesis/draft.txt
 It's not "publish or perish" any more,
 it's "share and thrive".
 ```
@@ -175,7 +175,7 @@ $ cd molecules
 $ wc cubane.pdb
   20  156 1158 cubane.pdb
 
-$ wc --help
+$ man wc
 Usage: wc [OPTION]... [FILE]...
   or:  wc [OPTION]... --files0-from=F
 Print newline, word, and byte counts for each FILE, and a total line if
