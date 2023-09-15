@@ -35,6 +35,8 @@ This is an interactive tool that will supply some defaults to help you create a 
 
 We'll test our keys out by authenticating to GitHub.
 
+GitHub provides many guides and documents explaining why and how this is done. For more, see: [GitHub Docs - About SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) and [GitHub Docs - Adding a new SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+
 ### Upload your key to GitHub
 
 1. Login to github.com from the browser
